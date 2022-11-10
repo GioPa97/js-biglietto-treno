@@ -1,12 +1,10 @@
 let valorepercorrenza = prompt("Inserisci il numero di Km da percorrere");
+
 let etapasseggero = prompt("Inserisci l'età del passeggero");
 
 let tariffabase = 0.21;
 
 let tariffacalcolata = valorepercorrenza * tariffabase;
-
-let scontominorenni = (tariffacalcolata * 20 / 100);
-let scontoanziani = (tariffacalcolata * 40 / 100);
 
 console.log(
     `
@@ -20,42 +18,34 @@ console.log(
     `
 );
 
-
+let prezzoArrotondato = tariffacalcolata.toFixed(2);
 
 if (etapasseggero > 65) {
+    let scontoanziani = (tariffacalcolata * 40 / 100);
+
     console.log(
 
         `
         sconto-over65: -40%;
-        Prezzo finale:  ${tariffacalcolata - scontoanziani} €
+        Prezzo finale:  ${prezzoArrotondato - scontoanziani} €
             `
     );
 } else if (etapasseggero < 18) {
+    let scontominorenni = (tariffacalcolata * 20 / 100);
+
     console.log(
 
         `
         sconto-under18: - 20%;
-        Prezzo finale:  ${tariffacalcolata - scontominorenni} €
+        Prezzo finale:  ${prezzoArrotondato - scontominorenni} €
             `
     );
 } else {
+
     console.log(
         `
-        Prezzo finale:  ${tariffacalcolata} €
+        Prezzo finale:  ${prezzoArrotondato} €
     `
 
     )
 };
-
-
-
-
-
-
-
-
-
-/*
-document.getElementById("p-nome").innerHTML = nome;
-
-document.getElementById("p-prezzo").innerHTML = nome + cognome + colore + (numero1 / numero2); */

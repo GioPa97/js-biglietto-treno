@@ -10,41 +10,44 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <div class="container bg-dark p-4">
-    <div class="row align-items-center">
-      <div class="col-4">
-        <img class="img-fluid  p-3" src="./img/hyperloop-1.jpeg" alt="Treno">
-      </div>
-      <div class="col-8">
-        <div class="row informazioni">
-          <div class="col-4 ">
-            <p>Distanza viaggio:</p>
-          </div>
-          <div class="col-8">
-            <p id="Distanza" class="informazioni-utente" style="color:aliceblue;"></p>
-          </div>
-          <div class="col-4 ">
-            <p>Età passeggero:</p>
-          </div>
-          <div class="col-8">
-            <p id="Età" class="informazioni-utente" style="color: aliceblue"></p>
-          </div>
 
+<body>
+  <div class="container bg-danger">
+    <div class="container bg-dark p-4">
+      <div class="row align-items-center">
+        <div class="col-sm-4">
+          <img class="img-fluid p-3" src="./img/hyperloop-1.jpeg" alt="Treno">
+        </div>
+        <div class="col-8">
+          <div class="row informazioni">
+            <div class="col-4 ">
+              <p>Distanza viaggio:</p>
+            </div>
+            <div class="col-8">
+              <p id="Distanza" class="informazioni-utente" style="color:aliceblue;"></p>
+            </div>
+            <div class="col-4 ">
+              <p>Età passeggero:</p>
+            </div>
+            <div class="col-8">
+              <p id="Età" class="informazioni-utente" style="color: aliceblue"></p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col informazioni align-content-end">
+          <p>Il prezzo finale è:</p>
+          <p id="PrezzoFinale" class="showprice" style="color: rgb(55, 185, 49)"></p>
         </div>
       </div>
-      <div class="col informazioni align-content-end">
-        <p>Il prezzo finale è:</p>
-        <p id="PrezzoFinale" class="showprice" style="color: rgb(55, 185, 49)"></p>
-      </div>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
   </div>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

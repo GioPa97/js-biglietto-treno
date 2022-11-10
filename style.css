@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.informazioni p {
+    margin: 0;
+    font-style: italic;
+    color: rgb(177, 34, 34);
+
+}
+
+
+.informazioni-utente {
+    font-weight: bold;
+}
+
+.showprice {
+    font-weight: bold;
+
+}

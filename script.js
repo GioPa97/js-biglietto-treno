@@ -20,16 +20,21 @@ console.log(
 
 let prezzoArrotondato = tariffacalcolata.toFixed(2);
 
+
+
 if (etapasseggero > 65) {
+
     let scontoanziani = (tariffacalcolata * 40 / 100);
 
     console.log(
 
         `
         sconto-over65: -40%;
-        Prezzo finale:  ${prezzoArrotondato - scontoanziani} €
+        Prezzo finale:  ${(prezzoArrotondato - scontoanziani).toFixed(2)} €
             `
     );
+    document.getElementById("PrezzoFinale").innerHTML = (prezzoArrotondato - scontoanziani).toFixed(2) + "€";
+
 } else if (etapasseggero < 18) {
     let scontominorenni = (tariffacalcolata * 20 / 100);
 
@@ -37,15 +42,24 @@ if (etapasseggero > 65) {
 
         `
         sconto-under18: - 20%;
-        Prezzo finale:  ${prezzoArrotondato - scontominorenni} €
+        Prezzo finale:  ${(prezzoArrotondato - scontominorenni).toFixed(2)} €
             `
     );
+    document.getElementById("PrezzoFinale").innerHTML = (prezzoArrotondato - scontominorenni).toFixed(2) + "€";
+
 } else {
 
     console.log(
         `
-        Prezzo finale:  ${prezzoArrotondato} €
+        Prezzo finale:  ${(prezzoArrotondato).toFixed(2)} €
     `
 
     )
+    document.getElementById("PrezzoFinale").innerHTML = (prezzoArrotondato).toFixed(2);
 };
+
+
+document.getElementById("Distanza").innerHTML = (valorepercorrenza) + (" " + "Km");
+document.getElementById("Età").innerHTML = (etapasseggero) + (" " + "Anni");
+
+

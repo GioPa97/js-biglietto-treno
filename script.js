@@ -48,14 +48,14 @@ if (etapasseggero > 65) {
     document.getElementById("PrezzoFinale").innerHTML = (prezzoArrotondato - scontominorenni).toFixed(2) + "€";
 
 } else {
+         console.log(
 
-    console.log(
         `
-        Prezzo finale:  ${(prezzoArrotondato).toFixed(2)} €
-    `
+        Prezzo finale:  ${prezzoArrotondato} €
+           `
 
-    )
-    document.getElementById("PrezzoFinale").innerHTML = (prezzoArrotondato).toFixed(2);
+    );
+    document.getElementById("PrezzoFinale").innerHTML = prezzoArrotondato + "€";
 };
 
 

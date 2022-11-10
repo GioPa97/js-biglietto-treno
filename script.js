@@ -5,8 +5,8 @@ let tariffabase = 0.21;
 
 let tariffacalcolata = valorepercorrenza * tariffabase;
 
-let scontominorenni = (tariffacalcolata*20/100);
-let scontoanziani = (tariffacalcolata*40/100);
+let scontominorenni = (tariffacalcolata * 20 / 100);
+let scontoanziani = (tariffacalcolata * 40 / 100);
 
 console.log(
     `
@@ -14,28 +14,38 @@ console.log(
 
         1)Km da percorrere:      ${valorepercorrenza} Km
         2)tariffa base:          ${tariffabase} €
-        )Età passeggero:        ${etapasseggero} Anni
-        
-    
-
-        Prezzo finale:          €
-
+        3)Prezzo esente sconti:  ${tariffacalcolata} €
+        4)Età passeggero:        ${etapasseggero} Anni
     ____________________________________________________Informazioni
     `
 );
 
 
 
+if (etapasseggero > 65) {
     console.log(
 
-     `
-    ${tariffacalcolata}
-    
-  
+        `
+        sconto-over65: -40%;
+        Prezzo finale:  ${tariffacalcolata - scontoanziani} €
+            `
+    );
+} else if (etapasseggero < 18) {
+    console.log(
 
+        `
+        sconto-under18: - 20%;
+        Prezzo finale:  ${tariffacalcolata - scontominorenni} €
+            `
+    );
+} else {
+    console.log(
+        `
+        Prezzo finale:  ${tariffacalcolata} €
     `
-     );
 
+    )
+};
 
 
 

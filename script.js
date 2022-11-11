@@ -18,7 +18,7 @@ console.log(
     `
 );
 
-let prezzoArrotondato = tariffacalcolata.toFixed(2);
+let prezzoArrotondato = tariffacalcolata.toFixed(2); parseFloat;
 
 
 
@@ -48,7 +48,7 @@ if (etapasseggero > 65) {
     document.getElementById("PrezzoFinale").innerHTML = (prezzoArrotondato - scontominorenni).toFixed(2) + "€";
 
 } else {
-         console.log(
+    console.log(
 
         `
         Prezzo finale:  ${prezzoArrotondato} €
